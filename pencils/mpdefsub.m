@@ -1,6 +1,5 @@
 function [V,info] = mpdefsub(M,N,discr,margin,tol,stable)
-%MPDEFSUB Summary of this function goes here
-% Computes maximal Cg proper deflating subspace --
+%MPDEFSUB Computes maximal Cg proper deflating subspace of a matrix pencil.
 % Implements Algorithm 2 -- pg. 209.
 %
 % [V,info] = mpdefsub(M,N)
