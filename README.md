@@ -27,9 +27,9 @@ iscrete-time cases in Optimal and Robust Control, such as:
     the individually obtained linear quadratic regulator and estimator.
 
 * **dstools**: set of functionalities for descriptor systems, taken from [2];
-of use in this project are *sl_gzero*, *sl_klf*, *gklf*, *gsfstab*, for determining the numerical
+of use in this project are *sl_gzero*, *sl_klf* (Fortran), *gklf*, *gsfstab* (MATLAB), for determining the numerical
 rank of a matrix pencil, obtaining the Kronecker-like form of a possibly singular matrix pencil
-(using the an optimized staircase algorithm), and for generalized eigenvalue assignment.
+(using an optimized staircase algorithm), and for generalized eigenvalue assignment.
 
 * **pencils**: main functionalities of the toolbox, providing functions for matrix pencils and the
 ARE solver.
