@@ -33,10 +33,10 @@ B2 = gamma^(+1/2)*B(:,m1+1:end);
 C1 = gamma^(-1/2)*C(1:p1,:);
 C2 = gamma^(+1/2)*C(p1+1:end,:);
 %
-D11 = gamma^(-1)*D(1:m1,1:p1);
-D12 = D(1:m1,p1+1:end);
-D21 = D(m1+1:end,1:p1);
-D22 = gamma*D(m1+1:end,p1+1:end);
+D11 = gamma^(-1)*D(1:p1, 1:m1);
+D12 = D(1:p1,m1+1:end);
+D21 = D(p1+1:end,1:m1);
+D22 = gamma*D(p1+1:end,m1+1:end);
 
 Pscaled = ss(A,[B1,B2],[C1;C2],[D11,D12;D21,D22],P.Ts);
 
