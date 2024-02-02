@@ -53,7 +53,11 @@ if hassol
     end
 else
     [F,X,info] = gricsv(sigma);
-    assert(info.has_solution == false);
+    % false negative if D11 ~= 0
+    if info.has_solution && ispositive(X,true)
+        warning(['The function returned that the ARE doesn''t have a solution',...
+            ' but GRICSV has found it.']);
+    end
 end
 
 end

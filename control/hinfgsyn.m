@@ -111,6 +111,8 @@ assert(all(Vc12(:) < eps),'Vc not lower block triangular.')
 Qx = B1/(Vc11'*Vc11)*B1';
 Lx = B1/(Vc11'*Vc11)*[Vc21',D21'];
 Rx = [Vc21;D21]/(Vc11'*Vc11)*[Vc21',D21'] - blkdiag(eye(m2),zeros(size(D21*D21')));
+% R must be hermitian. 
+Rx = (Rx + Rx')/2;
 %
 F1 = Fc(1:m1,:);
 F2 = Fc(m1+1:end,:); % length m2
